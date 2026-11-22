@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BITE HOUSE — Premium Fast Food | Andijon</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- CSS Fayllar -->
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./responsive.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-wrapper">
+      <a href="#home" class="brand-logo">
+        <div class="logo-icon"><i class="fa-solid fa-burger"></i></div>
+        <div class="logo-text">
+          <span>BITE</span><strong>HOUSE</strong>
+          <small data-i18n="city_badge">ANDIJON</small>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active" data-i18n="nav_home">Bosh sahifa</a>
+        <a href="#menu" class="nav-link" data-i18n="nav_menu">Menyu</a>
+        <a href="#about" class="nav-link" data-i18n="nav_about">Biz haqimizda</a>
+        <a href="#promos" class="nav-link" data-i18n="nav_promos">Aksiyalar</a>
+        <a href="#delivery" class="nav-link" data-i18n="nav_delivery">Yetkazib berish</a>
+        <a href="#contact" class="nav-link" data-i18n="nav_contact">Aloqa</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Til tanlash -->
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="uz">UZ</button>
+          <button class="lang-btn" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+
+        <!-- Kirish / Profil -->
+        <button class="btn-auth" id="authModalBtn">
+          <i class="fa-regular fa-user"></i>
+          <span id="authBtnLabel" data-i18n="nav_login">Kirish</span>
+        </button>
+
+        <!-- Savatcha tugmasi -->
+        <button class="btn-cart" id="openCartBtn" aria-label="Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+
+        <!-- Mobil menyu tugmasi -->
+        <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-glow"></div>
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-pill">
+          <span class="pulse-dot"></span>
+          <span data-i18n="hero_badge">Andijon markazida 30 daqiqada yetkazamiz!</span>
+        </div>
+        <h1 class="hero-title" data-i18n="hero_title">
+          Haqiqiy Olovda Pishgan <span>Premium</span> Ta’m!
+        </h1>
+        <p class="hero-subtitle" data-i18n="hero_subtitle">
+          100% halol mol go‘shti, yangi uzilgan sabzavotlar va maxsus mualliflik souslari bilan tayyorlangan burgerlar, lavashlar va issiq pitsalar.
+        </p>
+        <div class="hero-cta">
+          <a href="#menu" class="btn btn-primary">
+            <span data-i18n="hero_btn_order">Buyurtma berish</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#promos" class="btn btn-outline">
+            <i class="fa-solid fa-fire"></i>
+            <span data-i18n="hero_btn_promo">Aksiyalarni ko‘rish</span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <strong>30 min</strong>
+            <span data-i18n="stat_delivery">O‘rtacha yetkazish</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <strong>4.9 ★</strong>
+            <span data-i18n="stat_rating">Mijozlar bahosi</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <strong>100%</strong>
+            <span data-i18n="stat_halal">Halol mahsulotlar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-card-float top-badge">
+          <i class="fa-solid fa-bolt"></i>
+          <div>
+            <strong>BITE10</strong>
+            <small data-i18n="float_promo">10% chegirma kodi</small>
+          </div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85" alt="Bite House Signature Double Burger" class="hero-img" />
+        <div class="hero-card-float bottom-badge">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <strong>Andijon Markazi</strong>
+            <small>Bobur shoh ko‘chasi, 45</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU SECTION -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-tag" data-i18n="menu_tag">BIZNING MENYU</span>
+          <h2 class="section-title" data-i18n="menu_title">Mazali Taomlarni Tanlang</h2>
+        </div>
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="searchInput" data-i18n-placeholder="search_placeholder" placeholder="Taom nomi yoki tarkibi bo‘yicha qidirish..." />
+        </div>
+      </div>
+
+      <!-- Kategoriyalar -->
+      <div class="category-tabs" id="categoryTabs">
+        <button class="cat-btn active" data-category="all" data-i18n="cat_all">Barchasi</button>
+        <button class="cat-btn" data-category="burgers" data-i18n="cat_burgers">🍔 Burgerlar</button>
+        <button class="cat-btn" data-category="lavash" data-i18n="cat_lavash">🌯 Lavash</button>
+        <button class="cat-btn" data-category="pizza" data-i18n="cat_pizza">🍕 Pitsa</button>
+        <button class="cat-btn" data-category="hotdogs" data-i18n="cat_hotdogs">🌭 Hot-Dog</button>
+        <button class="cat-btn" data-category="doner" data-i18n="cat_doner">🥙 Doner</button>
+        <button class="cat-btn" data-category="drinks-carbonated" data-i18n="cat_carb">🥤 Gazli ichimliklar</button>
+        <button class="cat-btn" data-category="drinks-non-carbonated" data-i18n="cat_noncarb">🧃 Gazsiz ichimliklar</button>
+      </div>
+
+      <!-- Mahsulotlar Grid -->
+      <div class="products-grid" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- PROMOS SECTION -->
+  <section class="promos-section" id="promos">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-tag" data-i18n="promo_tag">MAXSUS TAKLIFLAR</span>
+          <h2 class="section-title" data-i18n="promo_title">Qaynoq Aksiyalar</h2>
+        </div>
+      </div>
+      <div class="promo-grid">
+        <div class="promo-card promo-red">
+          <div class="promo-info">
+            <span class="promo-badge">-10% CHEGIRMA</span>
+            <h3 data-i18n="promo1_title">Birinchi buyurtma uchun BITE10</h3>
+            <p data-i18n="promo1_desc">Savatchada BITE10 promokodini kiriting va umumiy summadan 10% chegirmaga ega bo‘ling.</p>
+            <button class="btn-copy-promo" data-code="BITE10">
+              <i class="fa-regular fa-copy"></i> <span data-i18n="copy_code">Koddan nusxa olish: BITE10</span>
+            </button>
+          </div>
+          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=500&q=80" alt="Promo Burger" />
+        </div>
+
+        <div class="promo-card promo-orange">
+          <div class="promo-info">
+            <span class="promo-badge" data-i18n="free_delivery_badge">BEPUL YETKAZISH</span>
+            <h3 data-i18n="promo2_title">100,000 so‘mdan oshsa — Yetkazish 0 so‘m!</h3>
+            <p data-i18n="promo2_desc">Andijon shahri bo‘ylab 100,000 UZS dan yuqori barcha buyurtmalar mutlaqo bepul yetkaziladi.</p>
+            <a href="#menu" class="btn-copy-promo" data-i18n="order_now_small">Hoziroq tanlash →</a>
+          </div>
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=80" alt="Promo Pizza" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT & DELIVERY SECTION -->
+  <section class="info-section" id="about">
+    <div class="container info-grid">
+      <div class="about-box">
+        <span class="section-tag" data-i18n="about_tag">BIZ HAQIMIZDA</span>
+        <h2 class="section-title" data-i18n="about_title">Nega aynan BITE HOUSE?</h2>
+        <p data-i18n="about_desc">
+          BITE HOUSE — Andijon shahri markazida joylashgan zamonaviy premium fast-food restorani. Biz har bir taomni buyurtma tushgan zahoti yangi masalliqlardan tayyorlaymiz. Muzlatilgan yarim tayyor mahsulotlardan foydalanmaymiz!
+        </p>
+        <div class="features-list">
+          <div class="feat-item">
+            <i class="fa-solid fa-fire-flame-curved"></i>
+            <div>
+              <h4 data-i18n="feat1_title">Issiq va Yangi</h4>
+              <p data-i18n="feat1_desc">Har bir burger va lavash maxsus termo-qadoqda yetkaziladi.</p>
+            </div>
+          </div>
+          <div class="feat-item">
+            <i class="fa-solid fa-award"></i>
+            <div>
+              <h4 data-i18n="feat2_title">Mualliflik Souslari</h4>
+              <p data-i18n="feat2_desc">Oshpazlarimiz retsepti asosidagi maxsus BITE souslari.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="delivery-box" id="delivery">
+        <span class="section-tag" data-i18n="deliv_tag">YETKAZIB BERISH SHARTLARI</span>
+        <h3 data-i18n="deliv_title">Andijon bo‘ylab tezkor kuryer xizmati</h3>
+        <ul class="delivery-zones">
+          <li>
+            <span><i class="fa-solid fa-location-crosshairs"></i> Andijon Markazi (Bobur, Navoiy, Mashrab)</span>
+            <strong>15,000 UZS (25-30 min)</strong>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-location-dot"></i> Yangi Bozor / Eski Shahar / Klara Setkin</span>
+            <strong>18,000 UZS (30-40 min)</strong>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-truck-fast"></i> Bog‘ishamol / Jahon Bozor hududi</span>
+            <strong>22,000 UZS (35-45 min)</strong>
+          </li>
+          <li class="highlight-zone">
+            <span><i class="fa-solid fa-gift"></i> 100,000 UZS dan yuqori buyurtmalar</span>
+            <strong>BEPUL / 0 UZS</strong>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER & CONTACT -->
+  <footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <a href="#home" class="brand-logo">
+          <div class="logo-icon"><i class="fa-solid fa-burger"></i></div>
+          <div class="logo-text"><span>BITE</span><strong>HOUSE</strong></div>
+        </a>
+        <p class="footer-desc" data-i18n="footer_desc">
+          Andijon shahri markazidagi eng mazali va tezkor premium fast-food tarmog‘i.
+        </p>
+        <div class="socials">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-telegram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 data-i18n="footer_links">Tezkor havolalar</h4>
+        <ul class="footer-list">
+          <li><a href="#home" data-i18n="nav_home">Bosh sahifa</a></li>
+          <li><a href="#menu" data-i18n="nav_menu">Menyu</a></li>
+          <li><a href="#promos" data-i18n="nav_promos">Aksiyalar</a></li>
+          <li><a href="#delivery" data-i18n="nav_delivery">Yetkazib berish</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 data-i18n="footer_contact">Aloqa va Manzil</h4>
+        <ul class="footer-list">
+          <li><i class="fa-solid fa-location-dot"></i> Andijon sh., Bobur shoh ko‘chasi, 45</li>
+          <li><i class="fa-solid fa-phone"></i> +998 (74) 223-55-77</li>
+          <li><i class="fa-solid fa-clock"></i> Har kuni: 10:00 — 02:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 BITE HOUSE Andijan. Barcha huquqlar himoyalangan.</p>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER (SAVATCHA) -->
+  <div class="drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="drawer-header">
+      <h3><i class="fa-solid fa-bag-shopping"></i> <span data-i18n="cart_title">Sizning savatchangiz</span></h3>
+      <button class="close-btn" id="closeCartBtn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <!-- Bepul yetkazish progress bari -->
+    <div class="free-delivery-bar">
+      <p id="freeDeliveryText">Bepul yetkazishgacha yana 100,000 UZS qoldi</p>
+      <div class="progress-track">
+        <div class="progress-fill" id="freeDeliveryProgress"></div>
+      </div>
+    </div>
+
+    <div class="cart-items" id="cartItemsContainer"></div>
+
+    <div class="cart-footer">
+      <div class="promo-input-group">
+        <input type="text" id="promoCodeInput" placeholder="Promokod (masalan: BITE10)" />
+        <button id="applyPromoBtn" data-i18n="apply_btn">Qo‘llash</button>
+      </div>
+      <div class="cart-summary">
+        <div class="sum-row"><span data-i18n="subtotal">Mahsulotlar:</span><strong id="cartSubtotal">0 UZS</strong></div>
+        <div class="sum-row"><span data-i18n="discount">Chegirma:</span><strong id="cartDiscount" class="text-green">-0 UZS</strong></div>
+        <div class="sum-row"><span data-i18n="delivery_fee">Yetkazib berish:</span><strong id="cartDelivery">15,000 UZS</strong></div>
+        <div class="sum-row total"><span data-i18n="total">Jami to‘lov:</span><strong id="cartTotal">0 UZS</strong></div>
+      </div>
+      <button class="btn btn-primary btn-block" id="proceedCheckoutBtn" data-i18n="checkout_btn">
+        Buyurtmani rasmiylashtirish
+      </button>
+    </div>
+  </aside>
+
+  <!-- PRODUCT QUICK VIEW MODAL -->
+  <div class="modal-backdrop" id="productModal">
+    <div class="modal-box product-modal-box">
+      <button class="close-btn modal-close" id="closeProductModal"><i class="fa-solid fa-xmark"></i></button>
+      <div id="productModalContent"></div>
+    </div>
+  </div>
+
+  <!-- AUTH MODAL (LOGIN / REGISTER / PROFILE) -->
+  <div class="modal-backdrop" id="authModal">
+    <div class="modal-box auth-modal-box">
+      <button class="close-btn modal-close" id="closeAuthModal"><i class="fa-solid fa-xmark"></i></button>
+      <div id="authModalBody"></div>
+    </div>
+  </div>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="modal-backdrop" id="checkoutModal">
+    <div class="modal-box checkout-modal-box">
+      <button class="close-btn modal-close" id="closeCheckoutModal"><i class="fa-solid fa-xmark"></i></button>
+      <div id="checkoutModalBody"></div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- JS Fayllar -->
+  <script src="./language.js"></script>
+  <script src="./products.js"></script>
+  <script src="./cart.js"></script>
+  <script src="./auth.js"></script>
+  <script src="./checkout.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>

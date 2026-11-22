@@ -1,0 +1,90 @@
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-cta, .hero-stats {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .promo-grid, .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .nav-links {
+    position: fixed;
+    top: 73px;
+    left: 0;
+    right: 0;
+    background: rgba(12, 12, 14, 0.97);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 28px;
+    border-bottom: 1px solid var(--border-color);
+    transform: translateY(-130%);
+    transition: transform 0.35s ease;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+  }
+
+  .top-badge, .bottom-badge {
+    position: static;
+    margin: 12px 0;
+  }
+
+  .promo-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .promo-card img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .btn-auth span {
+    display: none;
+  }
+}
